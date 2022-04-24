@@ -41,7 +41,7 @@ module.exports = anagrams;
 // 2nd solution
 // function anagrams(stringA, stringB) {
 //     const stringAModified = stringModifier(stringA);
-//     const stringBModified = stringModifier(stringB);
+//     const stringBModified = stringModifier(stringB);  
 //     if (stringAModified.length !== stringBModified.length) {
 //       return false;
 //     }
