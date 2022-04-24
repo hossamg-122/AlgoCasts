@@ -40,4 +40,4 @@ module.exports = reverse;
 // return reversedString.join("")
 
 // 4th solution
-// return str.split("").reduce((reverced,char)=>char+reverced,"")
+// return str.split("").reduce((reversed,char)=>char+reversed,"")
