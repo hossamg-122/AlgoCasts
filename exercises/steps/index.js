@@ -17,6 +17,56 @@
 //       '### '
 //       '####'
 
-function steps(n) {}
+function steps(n) {
+  for (let i = 0; i < n; i++) {
+    let square = "";
+    for (let j = 0; j < n; j++) {
+      j <= i ? (square += "#") : (square += " ");
+    }
+    console.log(square);
+  }
+}
 
 module.exports = steps;
+
+// 1st solution
+// function steps(n) {
+//     let shape = Array(n).fill(" ");
+//     for (let index = 0; index < n; index++) {
+//       shape.fill("#", index, index + 1);
+//       console.log(shape.join(""));
+//     }
+//   }
+
+// 2nd solution
+// function steps(n) {
+//     for (let i = 0; i < n; i++) {
+//       let square = [];
+//       for (let j = 0; j < n; j++) {
+//         j <= i ? square.push("#") : square.push(" ");
+//       }
+//       console.log(square.join(""));
+//     }
+//   }
+
+// 3rd solution
+// function steps(n) {
+//     for (let i = 0; i < n; i++) {
+//       let square = [];
+//       for (let j = 0; j < n; j++) {
+//         j <= i ? square.push("#") : square.push(" ");
+//       }
+//       console.log(square.join(""));
+//     }
+//   }
+
+// 4th solution
+// function steps(n) {
+//     for (let i = 0; i < n; i++) {
+//       let square = [];
+//       for (let j = 0; j < n; j++) {
+//         j <= i ? square.push("#") : square.push(" ");
+//       }
+//       console.log(square.join(""));
+//     }
+//   }
