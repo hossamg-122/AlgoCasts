@@ -17,14 +17,17 @@
 //       '### '
 //       '####'
 
-function steps(n) {
-  for (let i = 0; i < n; i++) {
-    let square = "";
-    for (let j = 0; j < n; j++) {
-      j <= i ? (square += "#") : (square += " ");
-    }
-    console.log(square);
+function steps(n, row = 0, str = "") {
+  if (n === row) {
+    return;
   }
+
+  if (str.length === n) {
+    console.log(str);
+    return steps(n, row + 1);
+  }
+  str.length <= row ? (str += "#") : (str += " ");
+  steps(n, row, str);
 }
 
 module.exports = steps;
@@ -62,11 +65,25 @@ module.exports = steps;
 
 // 4th solution
 // function steps(n) {
-//     for (let i = 0; i < n; i++) {
-//       let square = [];
-//       for (let j = 0; j < n; j++) {
-//         j <= i ? square.push("#") : square.push(" ");
-//       }
-//       console.log(square.join(""));
+//   for (let i = 0; i < n; i++) {
+//     let square = "";
+//     for (let j = 0; j < n; j++) {
+//       j <= i ? (square += "#") : (square += " ");
 //     }
+//     console.log(square);
 //   }
+// }
+
+// 5th recursive solution
+// function steps(n, row = 0, str = "") {
+//   if (n === row) {
+//     return;
+//   }
+
+//   if (str.length === n) {
+//     console.log(str);
+//     return steps(n, row + 1);
+//   }
+//   str.length <= row ? (str += "#") : (str += " ");
+//   steps(n, row, str);
+// }
