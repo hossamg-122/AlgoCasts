@@ -14,19 +14,21 @@
 //       ' ### '
 //       '#####'
 
-function pyramid(n,row=0,str="") {
-    if (n === row){
-        return
-    }
-    let cols = (n * 2) - 1
-    if(str.length===cols){
-        console.log(str)
-     return pyramid(n,row+1)
-    }
-    let leftRange = n-1-row
-        let rightRange = n-1+row
-        str.length>=leftRange && str.length<=rightRange ? str+="#":str+=" "
-        pyramid(n,row,str)
+function pyramid(n, row = 0, str = "") {
+  if (n === row) {
+    return;
+  }
+  let cols = n * 2 - 1;
+  if (str.length === cols) {
+    console.log(str);
+    return pyramid(n, row + 1);
+  }
+  let leftRange = n - 1 - row;
+  let rightRange = n - 1 + row;
+  str.length >= leftRange && str.length <= rightRange
+    ? (str += "#")
+    : (str += " ");
+  pyramid(n, row, str);
 }
 
 module.exports = pyramid;
@@ -42,9 +44,9 @@ module.exports = pyramid;
 //         let leftRange = n-1-i
 //         let rightRange = n-1+i
 //         for (let j = 0; j < cols; j++) {
-          
+
 //           j>=leftRange && j<=rightRange ? row.push("#"):row.push(" ")
-            
+
 //         }
 //         console.log(row.join(""))
 //     }
